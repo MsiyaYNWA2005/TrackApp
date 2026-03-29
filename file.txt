@@ -1,0 +1,73 @@
+Phase 1 — Project Setup & Login Page
+This is your foundation. Get this right and everything else sits on top of it.
+Tasks:
+1. Create your project folder structure
+2. Set up Firebase project (free account)
+3. Build the login page (HTML + CSS)
+4. Connect Firebase Authentication
+5. Make admin and student login work
+6. Redirect admin → admin dashboard
+7. Redirect student → student dashboard
+Goal at end of Phase 1:
+
+Two different users can log in and land on different pages
+
+
+Phase 2 — Admin Dashboard
+Tasks:
+1. Build admin dashboard UI
+2. Create a form to add a student
+   - Name, grade, subjects, marks
+3. Save student data to Firebase Firestore
+4. Display list of all students
+5. Add edit and delete functionality
+Goal at end of Phase 2:
+
+Admin can add and manage student marks
+
+
+Phase 3 — Student Dashboard
+Tasks:
+1. Build student dashboard UI
+2. When student logs in fetch their marks from Firestore
+3. Display their subjects and marks
+4. Show their class ranking
+Goal at end of Phase 3:
+
+Student logs in and sees their own marks and position
+
+
+Phase 4 — Leaderboard
+Tasks:
+1. Fetch all students from Firestore
+2. Calculate average mark per student
+3. Sort and display top 10
+4. Highlight number 1 student
+5. Separate leaderboard for Grade 9 and Grade 12
+6. Filter by semester
+Goal at end of Phase 4:
+
+Top 10 leaderboard is live and updates automatically
+
+
+
+Phase 5 — Claude AI Career Suggestions
+Tasks:
+1. Set up Claude API
+2. Build career suggestion page for students
+3. Pull student's marks automatically from Firestore
+4. Send marks to Claude with a good prompt
+5. Display Claude's career suggestions nicely
+Goal at end of Phase 5:
+
+Student clicks "Get Career Suggestions" and gets personalised AI advice based on their real marks
+
+
+Phase 6 — Polish & Deploy
+Tasks:
+1. Make it mobile responsive
+2. Clean up UI and styling
+3. Add loading states and error handling
+4. Deploy on Firebase Hosting (free)
+5. Write a good README for GitHub
+6. Add the live link to your CV

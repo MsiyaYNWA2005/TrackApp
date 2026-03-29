@@ -3,7 +3,6 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBbPqJp47o1X4doKPgl81SYgrH7plb3GbI",
   authDomain: "scholartracker-4c89b.firebaseapp.com",
   projectId: "scholartracker-4c89b",
   storageBucket: "scholartracker-4c89b.firebasestorage.app",
