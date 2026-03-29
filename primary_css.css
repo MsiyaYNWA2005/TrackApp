@@ -1,0 +1,422 @@
+nav{
+    /* justify-content: space-between;
+    border-color: black;
+    border-bottom: solid 0.1px;
+    padding-bottom: 5px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: solid 0.1px black;
+  padding: 10px 20px;
+  background: white;
+  z-index: 999;
+}
+body{
+    padding-top: 90px;
+}
+
+
+.Schalar_Tracker{
+    float: left;
+    color:black;
+}
+.nav_links ul li button{
+    margin-left: 250px;
+}
+
+ul li{
+    list-style: none;
+    flex-direction: row;
+}
+
+.nav_links ul{
+    display: flex;
+    margin-top: -55px;
+}
+
+/* will fix the button to have a border */
+
+.nav_links ul li .Login_nav{
+   border-color: black;
+   border-style: solid;
+   border-radius: 1px;
+   border-radius: 8px;
+   
+}
+.nav_links ul li button{
+    width:50%;
+    padding: 10px 0;
+    border: none;
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.LeaderBoard{
+    align-items: center;
+    margin-left: 470px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.Career_Page{
+    align-items: center;
+    margin-left: 470px;
+    justify-content: center;
+}
+
+.info_ai{
+   margin-left: -350px;
+}
+.Login {
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 480px;
+    justify-content: center;  
+}
+.students{
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 440px;
+    justify-content: center;  
+}
+.Leader_title{
+    margin-right: 20px;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    font-size: 25px;
+}
+.Student_marks_title{
+    margin-left: 60px;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    font-size: 25px;
+
+}
+.Login_title , .Career_title{
+    margin-right: 20px;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    font-size: 25px;
+}
+
+.input_box{
+    width:100%;
+    margin-top: 10px;
+    /* //padding-left: 100px; */
+    position: relative;
+    display: flex;
+}
+
+.input_box input{
+    width:100%;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    padding-left: 38px;
+    border-style: solid 3px;
+    border-radius: 99px;
+    outline: none;
+    color: black;
+    font-weight: 500;
+}
+
+.Career_Form{
+    width:320px;
+    padding: 20px;
+    border-radius: 16px;
+    color :black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student_input{
+    width:320px;
+    padding: 20px;
+    border-radius: 16px;
+    color :black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grades_student{
+    margin-top: 10px;
+    margin-left: 25px;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.add_subjects{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.Login_page {
+    width:320px;
+    padding: 20px;
+    border-radius: 16px;
+    border: solid 2px;
+    color :black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Add_subject{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 24px;
+    margin-left: 10px;
+    border: none;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 99px;
+}
+.butt_leader{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 24px;
+    margin-left: 102px;
+    border: none;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 99px;
+}
+.login_details ,.career_button{
+    width:100%;
+    margin-top: 24px;
+    padding: 10px 0;
+    border: none;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 99px;
+}
+
+.class_no_account{
+   font-weight: normal;
+   font-family: "Poppins",sans-serif;
+   margin-top: 20px;
+}
+
+.class_no_account a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.input_box i {
+    position: absolute;
+    margin-top: 10px;
+    left:14px;
+    font-size: 18px;
+}
+.input_box input::placeholder{
+    font-size:medium;
+    color: black;
+}
+
+
+
+.career_p{
+     font-family: "Poppins",sans-serif;
+}
+.Home{
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins",sans-serif;
+    margin-top: 40px;
+}
+.Home_items{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 510px;
+    margin-top: 70px;
+
+}
+.Track_home{
+    margin-left:10px;
+}
+.h2_Home1{
+    margin-left: -54px;
+    font-style: normal;
+    font-size:medium;
+}
+.h2_Home2{
+    margin-left: -45px;
+    font-style: normal;
+    font-size:medium;
+}
+.button_home_1{
+      margin-left: 95px;
+      border-radius: 7px;
+      padding-left: 50px;
+      padding-right: 50px;
+}
+.button_home{
+    margin-left: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 30%;
+    border: none;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 99px;
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(2,240px);
+    margin-top: 15px;
+    align-items: center;
+    gap: 90px;
+    margin-left: 340px;
+    
+}
+.card{
+    border-radius: 9px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border:solid 1px ;
+    border-color: black;
+    color: black;
+    min-height: 150px;
+    width: 240px;
+    height: 240px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: -20px;
+}
+.card-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+.main_{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 120px;
+    margin-right: 200px;
+}
+
+.student_input {
+  padding: 16px;
+}
+
+.student_input .Lname  {
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+}
+
+.student_input .Fname{
+     margin-bottom: 10px;
+     padding-bottom: 2px;
+}
+.student_input .Grade{
+     margin-bottom: 10px;
+     padding-bottom: 2px;
+}
+.student_input Add_subject  {
+      margin-top: 20px;
+      padding-bottom: 2px;
+}
+.row input::placeholder{
+    font-size:medium;
+    color: black;
+}
+.row input{
+    width:20%;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    padding-left: 30px;
+    border-style: solid 3px;
+    border-radius: 99px;
+    outline: none;
+    color: black;
+    font-weight: 500;
+}
+.row{
+  display: flex; 
+  flex-direction: row;
+  gap: 10px; 
+  margin-top: 5px;
+  margin-left: -5px;
+  margin-bottom: 10px;
+
+}
+
+table ,th,td{
+    margin-top: 3px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-collapse:collapse;
+    color:black;
+    margin-right:98px;
+    text-align: center;
+    flex: 5;
+    margin-left:49px;
+    font-family: "Poppins",sans-serif;
+
+}
+th,td{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.ToP_stu{
+    align-items: center;
+    margin-left: 550px;
+    margin-top: 90px;
+    justify-content: center;
+}
+.award_picture{
+    width: 210px;
+    height :auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.title_student{
+    margin-left: -90px;
+    font-weight: bold;
+     margin-top: -45px;
+    font-family: "Poppins",sans-serif;
+    font-size: 25px;
+}
+
+.student_content{
+    margin-left: 50px;
+}
+.scholar_logo{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  background: #4f46e5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
