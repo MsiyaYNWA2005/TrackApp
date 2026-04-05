@@ -48,6 +48,7 @@ const response = await fetch("https://api.groq.com/openai/v1/chat/completions", 
   headers: {
     "Content-Type": "application/json",
    //Mzothando Msiya Portfolio check the project file
+    "Authorization": `Bearer ${process.env.GROQ_API_KEY}`
   },
   body: JSON.stringify({
     model: "llama-3.1-8b-instant",
