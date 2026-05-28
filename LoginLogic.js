@@ -18,7 +18,6 @@ LoginBtn.addEventListener("click" , async function(){
     catch(error){
         alert("Login Failed:  " + error.message);
     };
-
     document.getElementById("EmailID").value="";
     document.getElementById("PasswordID").value="";
 })

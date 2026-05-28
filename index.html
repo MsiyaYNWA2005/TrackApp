@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
   <head>
-    <title>ScholarTracker | Track, Rank & Succeed</title>
     <link rel="stylesheet" href="primary_css.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -83,17 +82,16 @@
         </section>
       </section>
     </section>
-
-    
     <section id="LoginPage" class="Login">
       <form class="Login_page">
         <h2 class="Login_title">Login</h2>
         <section class="input_box">
           <input type="text" placeholder="Email" id="EmailID" />
+          <i class="bx bxs-user"></i>
         </section>
         <section class="input_box">
           <input type="text" placeholder="Password" id="PasswordID" />
-          
+          <i class="bx bxs-lock-alt"></i>
         </section>
         <button type="button" class="login_details" id="Login_BtnID">
           Login
@@ -144,25 +142,22 @@
       </section>
     </main>
 
-  <section id="Career_id" class="Career_Page">
-  <form class="Career_Form">
-    <h2 class="Career_title">Career Guide</h2>
-
-    <section class="input_box">
-      <input type="text" placeholder="Name" id="nameID" />
-    </section>
-
-    <section class="input_box">
-      <input type="text" placeholder="Surname" id="surnameID" />
-    </section>
-
-    <button type="button" class="career_button" id="Career_BtnID">
-      Get Career Suggestions
-    </button>
-
-    <section class="info_ai" id="career_marks"></section>
-  </form>
-</section>
+    <main id="Career">
+      <section id="Career_id" class="Career_Page">
+        <form class="Career_Form">
+          <h2 class="Career_title">Career Guide</h2>
+          <section class="input_box">
+            <input type="text" placeholder="Name" id="nameID" />
+          </section>
+          <section class="input_box">
+            <input type="text" placeholder="Surname" id="surnameID" />
+          </section>
+          <button type="button" class="career_button" id="Career_BtnID">
+            Get Career Suggestions
+          </button>
+        </form>
+        <section class="info_ai" id="career_marks"></section>
+      </section>
 
       <section id="LeaderBoard_data" class="LeaderBoard">
         <secton class="Leader_title"><h2>Students leaderBoard</h2></secton>
@@ -178,9 +173,6 @@
         <button id="butt_leader" class="butt_leader">Get LeaderBoard</button>
       </section>
 
-
-      
-
       <section id="ToP_stu" class="ToP_stu">
         <h2 class="title_student">🏆 Top Performing Student This Term</h2>
         <img class="award_picture" src="Top performing.png" />
@@ -189,12 +181,14 @@
           <h2 class="student-average" id="top-average"></h2>
         </section>
       </section>
+
     </main>
 
-     <div class="footer-note">
+
+  <div class="footer-note">
       © 2025 ScholarTracker — Empowering academic excellence & future careers
-    </div>
-    
+  </div>
+
     <script type="module" src="Authentic.js"></script>
     <script type="module" src="LoginLogic.js"></script>
     <script src="HandleFunction.js"></script>
