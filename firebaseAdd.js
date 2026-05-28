@@ -15,7 +15,21 @@ const express= require('express');
 //     "http://127.0.0.1:5500"
 //   ]
 // }))
+// app.use(cors());
+
 app.use(cors());
+app.use(express.json());
+
+// Manual CORS headers
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+  next();
+});
 
 // var serviceAccount = require("./schoolTracker.json");
 
