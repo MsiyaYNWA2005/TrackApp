@@ -8,8 +8,10 @@ Add_Subject.addEventListener("click" , function(){
 
     const subject=document.createElement("input");
     subject.placeholder="Subject";
+    subject.className="subject_input";
     const mark = document.createElement("input");
     mark.placeholder="Mark";
+    mark.className="mark_input";
 
     
 

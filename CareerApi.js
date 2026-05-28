@@ -43,28 +43,30 @@ const prompt = `
  marsk_p.className="career_p";
  marsk_p.innerHTML=Markstring;
  sectic.appendChild(marsk_p);
-const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+
+ 
+const response = await fetch("http://localhost:3000/get-career-suggestion", {
   method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-   //Mzothando Msiya Portfolio check the project file
-    "Authorization": "Bearer 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"
-  },
-  body: JSON.stringify({
-    model: "llama-3.1-8b-instant",
-    max_tokens: 1024,
-    messages: [{ role: "user", content: prompt}]
-  })
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ prompt: prompt })
 });
 
    const cloud = await response.json();
    console.log(cloud);
-   console.log(cloud.choices[0].message.content);
+   
+
+
+   if (!cloud.result) {
+    console.log("error from server:", cloud);
+    sectic.innerHTML = "Could not get suggestions. Try again.";
+    return;
+  }
 
   
     const suggest_cloud = document.createElement("p");
     suggest_cloud.className="career_p";
-    suggest_cloud.innerHTML=cloud.choices[0].message.content;
+    suggest_cloud.innerHTML=cloud.result;
+
 
  
     sectic.appendChild(suggest_cloud);

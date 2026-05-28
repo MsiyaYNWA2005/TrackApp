@@ -71,3 +71,17 @@ Tasks:
 4. Deploy on Firebase Hosting (free)
 5. Write a good README for GitHub
 6. Add the live link to your CV
+
+const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+   //Mzothando Msiya Portfolio check the project file
+    "Authorization": "Bearer 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"
+  },
+  body: JSON.stringify({
+    model: "llama-3.1-8b-instant",
+    max_tokens: 1024,
+    messages: [{ role: "user", content: prompt}]
+  })
+});
