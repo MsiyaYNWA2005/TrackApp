@@ -7,14 +7,15 @@ const admin = require("firebase-admin");
 const express= require('express');
 
 // const cors = require('cors');
-app.use(cors({
-  origin: [
-    "https://scholartracker-4c89b.web.app",
-    "https://scholartracker-4c89b.firebaseapp.com",
-    "http://localhost:3000",
-    "http://127.0.0.1:5500"
-  ]
-}))
+// app.use(cors({
+//   origin: [
+//     "https://scholartracker-4c89b.web.app",
+//     "https://scholartracker-4c89b.firebaseapp.com",
+//     "http://localhost:3000",
+//     "http://127.0.0.1:5500"
+//   ]
+// }))
+app.use(cors());
 
 // var serviceAccount = require("./schoolTracker.json");
 
