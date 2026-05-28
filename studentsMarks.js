@@ -62,7 +62,8 @@ submit.addEventListener("click", async function(){
     }
 
     try{
-        const response = await  fetch('http://localhost:3000/post-data-firebase',
+        //await  fetch('http://localhost:3000/post-data-firebase'
+        const response = await  fetch("https://trackapp-production-8346.up.railway.app/post-data-firebase",
                        {
                          method:"POST",
                           headers:{
