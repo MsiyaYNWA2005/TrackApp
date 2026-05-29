@@ -23,7 +23,7 @@ const cors = require('cors');
 // }
 
 var serviceAccount = JSON.parse(
-  Buffer.from(process.env.FIREBASE_PRIVATE_KEY_BASE64, 'base64').toString('utf8')
+  Buffer.from(process.env.FIREBASE_PRIVATE_KEY_BASE64,'base64').toString('utf8')
 );
 
 try {
