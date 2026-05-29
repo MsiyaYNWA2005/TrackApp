@@ -87,8 +87,8 @@ app.post('/post-data-firebase', async function(req, res) {
 
 
 app.get('/get-data-firebase' , async function(req,res){
-    const student_name =req.query.name;
-    const student_surname = req.query.surname;
+    const student_name =req.query.name.trim();
+    const student_surname = req.query.surname.trim();
      try {
         const snapshots = await db.collection('Student').get();
         const students = snapshots.docs;
