@@ -2,7 +2,7 @@
 //server file
 const Groq = require("groq-sdk");
 require("dotenv").config();
-const functions = require("firebase-functions");
+// const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const express= require('express');
 
@@ -139,9 +139,9 @@ app.post('/get-career-suggestion', async function(req, res) {
 });
 
 
-exports.app = functions.https.onRequest(app);
+// exports.app = functions.https.onRequest(app);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
