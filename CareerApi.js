@@ -4,6 +4,7 @@ async function Get_fetch(){
    // let response = await fetch(`http://localhost:3000/get-data-firebase?name=${student_name}&surname=${student_surname}`);
     let response = await fetch(`https://trackapp-production-8346.up.railway.app/get-data-firebase?name=${student_name}&surname=${student_surname}`)
     let data  =  await response.json();
+    console.log(data);
     return data;
 }
 
