@@ -2,36 +2,10 @@
 //server file
 const Groq = require("groq-sdk");
 require("dotenv").config();
-// const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const express= require('express');
+const cors = require('cors');
 
-// const cors = require('cors');
-// app.use(cors({
-//   origin: [
-//     "https://scholartracker-4c89b.web.app",
-//     "https://scholartracker-4c89b.firebaseapp.com",
-//     "http://localhost:3000",
-//     "http://127.0.0.1:5500"
-//   ]
-// }))
-// app.use(cors());
-
-app.use(cors());
-app.use(express.json());
-
-// Manual CORS headers
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
-  next();
-});
-
-// var serviceAccount = require("./schoolTracker.json");
 
 var serviceAccount = {
   projectId: process.env.FIREBASE_PROJECT_ID,
@@ -50,10 +24,20 @@ const db= admin.firestore();
 
 
 
-app.use(cors({origin : true}))
-app.use(express.json())
 
 
+app.use(cors());
+app.use(express.json());
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+  next();
+});
 
 app.post('/post-data-firebase', async function(req, res) {
     try {
