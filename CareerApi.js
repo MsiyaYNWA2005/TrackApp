@@ -2,7 +2,7 @@ async function Get_fetch(){
     const student_name = document.getElementById("nameID").value;
     const student_surname=document.getElementById("surnameID").value;
    // let response = await fetch(`http://localhost:3000/get-data-firebase?name=${student_name}&surname=${student_surname}`);
-    let response = await  fetch("https://trackapp-production-8346.up.railway.app/get-data-firebase?name=...")
+    let response = await  fetch(`https://trackapp-production-8346.up.railway.app/get-data-firebase?name=${student_name}&surname=${student_surname}`)
     let data  =  await response.json();
     return data;
 }
