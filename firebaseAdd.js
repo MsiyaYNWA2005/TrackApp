@@ -39,6 +39,12 @@ app.use(function(req, res, next) {
   next();
 });
 
+
+app.get('/', function(req, res) {
+    res.send({ status: "Server is running" });
+});
+
+
 app.post('/post-data-firebase', async function(req, res) {
     try {
         await db.collection('Student').add({
