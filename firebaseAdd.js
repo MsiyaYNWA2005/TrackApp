@@ -6,22 +6,23 @@ const admin = require("firebase-admin");
 const express= require('express');
 const cors = require('cors');
 
+var serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
-var serviceAccount = {
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  privateKey: Buffer.from(process.env.FIREBASE_PRIVATE_KEY_BASE64, 'base64').toString('utf8'),
-  clientEmail: process.env.FIREBASE_CLIENT_EMAIL
-};
+
+
+
 
 
 try{
     admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert(serviceAccount),
 });
  console.log("Firebase initialized successfully");
 } catch(error) {
   console.log("Firebase init error:", error.message);
 }
+
+//can you please deploy
 
 const app = express();
 const db= admin.firestore();
