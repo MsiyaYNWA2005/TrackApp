@@ -9,9 +9,10 @@ const cors = require('cors');
 
 var serviceAccount = {
   projectId: process.env.FIREBASE_PROJECT_ID,
-  privateKey: process.env.FIREBASE_PRIVATE_KEY.split('\\n').join('\n'),
+  privateKey: Buffer.from(process.env.FIREBASE_PRIVATE_KEY_BASE64, 'base64').toString('utf8'),
   clientEmail: process.env.FIREBASE_CLIENT_EMAIL
 };
+
 
 try{
     admin.initializeApp({
