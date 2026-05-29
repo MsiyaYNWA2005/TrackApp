@@ -13,14 +13,22 @@ var serviceAccount = {
   clientEmail: process.env.FIREBASE_CLIENT_EMAIL
 };
 
-
-admin.initializeApp({
+try{
+    admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
+ console.log("Firebase initialized successfully");
+} catch(error) {
+  console.log("Firebase init error:", error.message);
+}
 
 const app = express();
 const db= admin.firestore();
 
+
+console.log("Project ID:", process.env.FIREBASE_PROJECT_ID);
+console.log("Client Email:", process.env.FIREBASE_CLIENT_EMAIL);
+console.log("Private Key exists:", !!process.env.FIREBASE_PRIVATE_KEY);
 
 
 
