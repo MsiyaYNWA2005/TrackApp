@@ -8,6 +8,43 @@ if (!getApps().length) {
     });
 }
 
+try {
+    console.log(
+        "FIREBASE_KEY_BASE64 exists:",
+        !!process.env.FIREBASE_KEY_BASE64
+    );
+
+    if (process.env.FIREBASE_KEY_BASE64) {
+        const decoded = Buffer.from(
+            process.env.FIREBASE_KEY_BASE64,
+            'base64'
+        ).toString('utf8');
+
+        console.log(
+            "Decoded starts with:",
+            decoded.substring(0, 50)
+        );
+    }
+
+    if (!getApps().length) {
+        initializeApp({
+            credential: cert(
+                JSON.parse(
+                    Buffer.from(
+                        process.env.FIREBASE_KEY_BASE64,
+                        'base64'
+                    ).toString('utf8')
+                )
+            )
+        });
+    }
+} catch (error) {
+    console.error(
+        "Firebase initialization error:",
+        error
+    );
+}
+
 const db = getFirestore();
 
 
