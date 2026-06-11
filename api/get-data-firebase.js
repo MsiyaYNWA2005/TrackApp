@@ -4,7 +4,7 @@ import { getFirestore } from 'firebase-admin/firestore';
 
 if (!getApps().length) {
     initializeApp({
-        credential: cert(JSON.parse(Buffer.from(process.env.FIREBASE_KEY_BASE64, 'base64').toString('utf8')))
+        credential: cert(JSON.parse(Buffer.from(process.env.FIREBASE_PRIVATE_KEY_BASE64, 'base64').toString('utf8')))
     });
 }
 
