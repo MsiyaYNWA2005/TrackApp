@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ScholarTracker | Track, Rank & Succeed</title>
+    <link rel="stylesheet" href="primary_css.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="#" onclick="HomePage()" class="scholar_logo">
+        <div class="icon">
+          <i class="bx bxs-home"></i>
+        </div>
+        <h2 class="Schalar_Tracker">ScholarTracker</h2></a
+      >
+      <section class="nav_links">
+        <ul>
+          <li>
+            <button onclick="LeaderBoard_Page()">Leaderboard</button>
+          </li>
+          <li>
+            <button onclick="Career_Page()">Career guide</button>
+          </li>
+          <li>
+            <button onclick="LoginPage()" class="Login_nav">Admin Login</button>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <section id="HomePage" class="Home">
+      <section class="Home_items">
+        <button class="button_home_1">Grade12</button>
+        <h1 class="Track_home">Track. Rank. Succeed.</h1>
+        <section>
+          <h2 class="h2_Home1">
+            View student leaderboards, discover top performers, and
+          </h2>
+          <h2 class="h2_Home2">
+            explore careerpaths based on your academic strengths.
+          </h2>
+        </section>
+
+        <button onclick="Top_student_Page()" id="Top_But" class="button_home">
+          🥇 View High Perfoming Student
+        </button>
+      </section>
+
+      <section id="card-grid" class="card-grid">
+        <section class="card">
+          <div class="card-icon">🏆</div>
+          <h2>Top 10 leaderboard</h2>
+          <p>
+            See the highest ranked students in each term for Grade 9 and Grade
+            12.
+          </p>
+        </section>
+        <section class="card">
+          <div class="card-icon">🎓</div>
+          <h2>Career suggestions</h2>
+          <p>
+            Get AI-powered career and subject recommendations based on academic
+            performance.
+          </p>
+        </section>
+        <section class="card">
+          <div class="card-icon">⭐</div>
+          <h2>Student spotlight</h2>
+          <p>
+            The number one student is highlighted each semester until new
+            results are released
+          </p>
+        </section>
+        <section class="card">
+          <div class="card-icon">📊</div>
+          <h2>Subject averages</h2>
+          <p>
+            Browse average marks per subject to understand where students are
+            excelling.
+          </p>
+        </section>
+      </section>
+    </section>
+
+    
+    <section id="LoginPage" class="Login">
+      <form class="Login_page">
+        <h2 class="Login_title">Login</h2>
+        <section class="input_box">
+          <input type="text" placeholder="Email" id="EmailID" />
+        </section>
+        <section class="input_box">
+          <input type="text" placeholder="Password" id="PasswordID" />
+          
+        </section>
+        <button type="button" class="login_details" id="Login_BtnID">
+          Login
+        </button>
+
+        <h5 class="class_no_account">
+          Don't have an account? <a href="#">Register</a>
+        </h5>
+      </form>
+    </section>
+
+    <main id="stu" class="stu">
+      <section id="students_page" class="students">
+        <h2 class="Student_marks_title">Student Registration</h2>
+        <form id="add_inputs" class="student_input">
+           <section class="input_box">
+             <input
+            type="text"
+            id="name"
+            placeholder="Student Name"
+            class="Fname"
+          />
+          </section>
+          <section class="input_box">
+            <input
+              type="text"
+              id="surname"
+              placeholder="Student Surname"
+              class="Lname"
+          </section>
+          </section>
+        </form>
+          <section class="grades_student">
+          <label for="Grade">Grade</label>
+          <select name="Grade" class="Grade" id="grade">
+            <option class="option_grade">12</option>
+            <option>9</option>
+          </select>
+          </section>
+          <section id="add_subjects" class="add_subjects"></section>
+          <section class="button_addstudents">
+            <button type="button" id="Add_subject" class="Add_subject">
+              Add Subject
+            </button>
+            <button type="button" id="submit_marks" class="Add_subject">
+              Add Student
+            </button>
+      </section>
+    </main>
+
+  <section id="Career_id" class="Career_Page">
+  <form class="Career_Form">
+    <h2 class="Career_title">Career Guide</h2>
+
+    <section class="input_box">
+      <input type="text" placeholder="Name" id="nameID" />
+    </section>
+
+    <section class="input_box">
+      <input type="text" placeholder="Surname" id="surnameID" />
+    </section>
+
+    <button type="button" class="career_button" id="Career_BtnID">
+      Get Career Suggestions
+    </button>
+
+    <section class="info_ai" id="career_marks"></section>
+  </form>
+</section>
+
+      <section id="LeaderBoard_data" class="LeaderBoard">
+        <secton class="Leader_title"><h2>Students leaderBoard</h2></secton>
+        <section id="get_Students"></section>
+        <table class="table_">
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Average</th>
+          </tr>
+          <tbody id="List_table"></tbody>
+        </table>
+        <button id="butt_leader" class="butt_leader">Get LeaderBoard</button>
+      </section>
+
+
+      
+
+      <section id="ToP_stu" class="ToP_stu">
+        <h2 class="title_student">🏆 Top Performing Student This Term</h2>
+        <img class="award_picture" src="Top performing.png" />
+        <section class="student_content">
+          <h1 class="student-name" id="top-name"></h1>
+          <h2 class="student-average" id="top-average"></h2>
+        </section>
+      </section>
+    </main>
+
+     <div class="footer-note">
+      © 2025 ScholarTracker — Empowering academic excellence & future careers
+    </div>
+    
+    <script type="module" src="Authentic.js"></script>
+    <script type="module" src="LoginLogic.js"></script>
+    <script src="HandleFunction.js"></script>
+    <script src="studentsMarks.js"></script>
+    <script src="firebaseAdd.js"></script>
+    <script src="CareerApi.js"></script>
+    <script src="leaderBoardApi.js"></script>
+  </body>
+</html>
