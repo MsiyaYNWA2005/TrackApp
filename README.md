@@ -99,8 +99,8 @@ Before running the project locally, make sure you have:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/ScholarTracker.git
-cd ScholarTracker
+git clone https://github.com/MsiyaYNWA2005/TrackApp.git
+cd TrackApp
 ```
 
 Install dependencies:
